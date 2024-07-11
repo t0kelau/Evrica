@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}EVRICA: Sign In, Sign Up{% endblock %}
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <!-- Left half for text and buttons -->
+        <div class="text">
+            <h1>Discover Endless Opportunities And Learn New Skills</h1>
+            <p>Lorem Ipsum lorem lorem ipsum ipsum ipsum lorem ipsum Ipsum ipsum ipsumLorem Ipsum lorem lorem ipsum
+                ipsum ipsum</p>
+
+            <div class="row">
+                <div class="col-4">
+                    <a href="/SignUp" class="nav-link btn btn-outline-primary rounded-3"
+                       style="background-color: #800080; color: white; border-color: #6f42c1; padding: 10px 20px;"
+                       onmouseover="this.style.backgroundColor='#9C4BA2'; this.style.borderColor='#800080';"
+                       onmouseout="this.style.backgroundColor='#800080'; this.style.borderColor='#6f42c1';">
+                        Student
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="/SignUp_org" class="nav-link btn btn-outline-primary rounded-3"
+                       style="background-color: #800080; color: white; border-color: #6f42c1; border-radius: 20px; padding: 10px 20px;"
+                       onmouseover="this.style.backgroundColor='#9C4BA2'; this.style.borderColor='#800080';"
+                       onmouseout="this.style.backgroundColor='#800080'; this.style.borderColor='#6f42c1';">
+                        Organisation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <!-- Right half for the image -->
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-item active">
+                <img src="/static/images/mainpage.png" class="d-block w-100" alt="...">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 50px;">
+    <div class="col-12" style="position: relative; text-align: right;">
+        <a href="https://www.tbceducation.ge/" style="position: absolute; bottom: -150px; right: 0;">
+            <img src="/static/images/tbc.png" class="bottom-right-img" alt="Small Image" style="width: 150px; height: auto;">
+        </a>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+

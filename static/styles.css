@@ -1,0 +1,18 @@
+html, body{
+background-color: #f2fbff;
+}
+
+.custom-btn-purple {
+    background-color: #6f42c1; /* Dark purple background color */
+    color: white; /* White text color */
+    border-color: #6f42c1; /* Border color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Optional: Adjust padding as needed */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.custom-btn-purple:hover {
+    background-color: #563d7c; /* Darken the background on hover */
+    border-color: #563d7c; /* Darken the border color on hover */
+    color: white; /* Maintain white text color on hover */
+}

@@ -1,0 +1,6 @@
+Flask
+Flask-WTF
+email-validator
+Flask_SQLAlchemy
+Flask-Login
+gunicorn

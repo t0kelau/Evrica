@@ -1,0 +1,92 @@
+{% extends "base_for_sign.html" %}
+
+{% block title %}Sign Up | EVRICA{% endblock %}
+
+{% block body %}
+<div class="container bg-white mt-3 p-3 rounded shadow" style="margin-bottom: 100px;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="signup-container">
+                <h2 class="text-center mb-4">Sign Up</h2>
+
+
+                <div class="row justify-content-center mb-3">
+                    <a href="/SignUp" class="col-2 g-0 text-center">
+                        {{ form.Student(class="form-control btn btn-primary rounded-0 w-100") }}
+                    </a>
+                    <a href="/SignUp_org" class="col-3 g-0 text-center" style="text-decoration: none;">
+                        {{ form.Organisation(class="form-control rounded-0 w-100", style="transition: background-color
+                        0.3s;") }}
+                    </a>
+                    <style>
+                    .col-3.g-0:hover .form-control {
+                        background-color: #f0f0f0; /* Light grey background color */
+                    }
+                    .col-3.g-0:hover {
+                        text-decoration: none;
+                    }
+                </style>
+                </div>
+
+
+
+                <form enctype="multipart/form-data" method="post">
+                    {{ form.hidden_tag() }}
+
+                    <div class="row mb-3">
+                        {{ form.profile_img.label.text }}: {{ form.profile_img(accept=".jpg,.png") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        {{ form.FullName(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Birthday</label>
+                        {{ form.Birthday(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Region</label>
+                        {{ form.Region(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        {{ form.Gender(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        {{ form.Email(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        {{ form.Password(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        {{ form.ConfirmPassword(class="form-control") }}
+                    </div>
+
+
+                    <div class="mb-3">
+                        {% for errors in form.errors.values() %}
+                        <div class="alert alert-danger">
+                            {% for error in errors %}
+                            *{{ error }}<br>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+
+
+                    <div class="mb-3">
+                        {{ form.Sign_Up(class="btn btn-primary w-100") }}
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

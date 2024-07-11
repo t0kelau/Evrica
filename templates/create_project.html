@@ -1,0 +1,43 @@
+{% extends "base_for_sign.html" %}
+
+{% block title %}Sign Up | EVRICA{% endblock %}
+
+{% block body %}
+<div class="container bg-white mt-3 p-3 rounded shadow" style="margin-bottom: 100px;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="signup-container">
+
+                <h2 class="text-center mb-4">Add new project</h2>
+
+                <form method="POST" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+
+
+                    <div class="mb-3">
+                        <label class="form-label">Project title</label>
+                        {{ form.title(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Deadline</label>
+                        {{ form.deadline(class="form-control") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Project description</label>
+                        {{ form.detailed_description(class="form-control") }}
+                    </div>
+                    <div class="row mb-3">
+                        {{ form.project_img.label.text }}: {{ form.project_img(accept=".jpg,.png") }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.submit(class="btn btn-primary w-100") }}
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
